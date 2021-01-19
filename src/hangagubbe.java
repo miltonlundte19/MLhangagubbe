@@ -11,6 +11,12 @@ public class hangagubbe {
             blanord = blanord + " _";
         }
         //JOptionPane.showMessageDialog(null, ord + "\n" + blanord);
+        char gisboks;
+        String bokstiSt;
+        while (true){
+            bokstiSt = JOptionPane.showInputDialog("Gisa på en bokstav (får inte vara en sifra)");
+
+        }
     }
 
     private static String ordslumpare() {
