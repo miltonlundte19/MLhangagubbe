@@ -6,11 +6,11 @@ public class hangagubbe {
         int ordlän = ord.length();
         String blanord = "_";
         int k;
-        System.out.println(ordlän);
+        //System.out.println(ordlän);
         for (k=1;k!=ordlän;k++){
             blanord = blanord + " _";
         }
-
+        //JOptionPane.showMessageDialog(null, ord + "\n" + blanord);
     }
 
     private static String ordslumpare() {
