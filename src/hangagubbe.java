@@ -1,12 +1,14 @@
 public class hangagubbe {
     public static void main(String[] args) {
         String ord = ordslumpare();
-        
+
     }
 
     private static String ordslumpare() {
-        String[] ordind = {"ett", "java", };
+        String[] ordind = {"ett", "java", "faxe"};
 
-        return null;
+
+        String ord = "faxe";
+        return ord;
     }
 }
