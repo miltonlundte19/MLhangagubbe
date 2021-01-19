@@ -7,6 +7,9 @@ public class hangagubbe {
         String blanord = "_";
         int k;
         System.out.println(ordlän);
+        for (k=1;k!=ordlän;k++){
+            blanord = blanord + " _";
+        }
 
     }
 
