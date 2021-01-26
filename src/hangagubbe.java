@@ -13,9 +13,14 @@ public class hangagubbe {
         //JOptionPane.showMessageDialog(null, ord + "\n" + blanord);
         char gisboks;
         String bokstiSt;
-        while (true){
+        Boolean BokstGis = true;
+        while (BokstGis){
             bokstiSt = JOptionPane.showInputDialog("Gisa på en bokstav (får inte vara en sifra)");
+            int teslän, intnum;
+            teslän = bokstiSt.length();
+            if (teslän == 1){
 
+            }
         }
     }
 
