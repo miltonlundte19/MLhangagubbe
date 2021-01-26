@@ -11,7 +11,7 @@ public class hangagubbe {
             blanord = blanord + " _";
         }
         //JOptionPane.showMessageDialog(null, ord + "\n" + blanord);
-        char gisboks;
+        char gisboks = ' ';
         String bokstiSt;
         Boolean BokstGis = true;
         while (BokstGis){
@@ -19,9 +19,19 @@ public class hangagubbe {
             int teslän, intnum;
             teslän = bokstiSt.length();
             if (teslän == 1){
-
+                try {
+                    intnum = Integer.parseInt(bokstiSt);
+                } catch (NumberFormatException e) {
+                    gisboks = bokstiSt.charAt(0);
+                    System.out.println(1);
+                    intnum = 0;
+                    BokstGis = false;
+                }
             }
+
+            JOptionPane.showMessageDialog(null, "Du har skrivit antingen flera bokstäver eller en sifra! \n Försök igen...");
         }
+        System.out.println(gisboks);
     }
 
     private static String ordslumpare() {
