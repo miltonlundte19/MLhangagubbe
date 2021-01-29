@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.util.ArrayList;
 
 public class hangagubbe {
     public static void main(String[] args) {
@@ -24,7 +25,11 @@ public class hangagubbe {
             }
 
         }
-        System.out.println(gisboks);
+//        System.out.println(gisboks);
+        ArrayList<Character> gisadebokstävar = new ArrayList<Character>();
+
+
+
     }
 
     private static char bokstkonverter(String bokstiSt) {
