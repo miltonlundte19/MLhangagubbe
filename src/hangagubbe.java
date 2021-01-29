@@ -41,8 +41,21 @@ public class hangagubbe {
 
     private static char bokstkonverter(String bokstiSt) {
         int i = bokstiSt.length();
-
-        return 0;
+        int n;
+        int m = 1;
+        char b = bokstiSt.charAt(0);
+        if (i == 1) {
+            try {
+                n = Integer.parseInt(bokstiSt);
+            } catch (NumberFormatException e) {
+                m = 5;
+                n = 0;
+            }
+        }
+        if (m == 1){
+            b = ' ';
+        }
+        return b;
     }
 
     private static String ordslumpare() {
