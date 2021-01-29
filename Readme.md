@@ -11,4 +11,7 @@ Okså har jag börjat på att gisa på bokstäver och jag har en lösning på de
 - 2021-01-26:
 Har gjort nestan färdigt gisningen till bokstaven men har inte lykats fiksa logiken så att man måste gisa på en bokstav och inte ett numer. Men har inte riktigt lykats för jag förstår inte riktigt varför.
   
--2021-01-29:
+- 2021-01-29:
+har gjort om och färdigt logiken för att gisa på en bokstav. Har också börjat på att göra en funktion för att lagra alla gisade bokstäver.
+
+- 2021-
