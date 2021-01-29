@@ -26,8 +26,12 @@ public class hangagubbe {
 
         }
 //        System.out.println(gisboks);
+        Character gisbokChar = gisboks;
         ArrayList<Character> gisadebokstävar = new ArrayList<Character>();
-
+        int g = gisadebokstävar.size();
+        if (g == 0){
+            gisadebokstävar = gisadebokstävar.add((char)Character.(gisboks));
+        }
 
 
     }
