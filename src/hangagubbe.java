@@ -16,6 +16,7 @@ public class hangagubbe {
         Boolean BokstGis = true;
         while (BokstGis){
             bokstiSt = JOptionPane.showInputDialog("Gisa på en bokstav (får inte vara en sifra)");
+            gisboks = bokstkonverter(bokstiSt);
             int teslän, intnum;
             teslän = bokstiSt.length();
             System.out.println(teslän + "0");
@@ -36,6 +37,12 @@ public class hangagubbe {
             }
         }
         System.out.println(gisboks);
+    }
+
+    private static char bokstkonverter(String bokstiSt) {
+        int i = bokstiSt.length();
+
+        return 0;
     }
 
     private static String ordslumpare() {
