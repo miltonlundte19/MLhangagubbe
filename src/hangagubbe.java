@@ -17,24 +17,12 @@ public class hangagubbe {
         while (BokstGis){
             bokstiSt = JOptionPane.showInputDialog("Gisa på en bokstav (får inte vara en sifra)");
             gisboks = bokstkonverter(bokstiSt);
-            int teslän, intnum;
-            teslän = bokstiSt.length();
-            System.out.println(teslän + "0");
-            if (teslän == 1){
-                System.out.println("1");
-                try {
-                    intnum = Integer.parseInt(bokstiSt);
-                } catch (NumberFormatException e) {
-                    gisboks = bokstiSt.charAt(0);
-                    System.out.println("2");
-                    intnum = 0;
-                    BokstGis = false;
-                }
-            }
-            System.out.println("3");
-            if (BokstGis = true) {
+            if (gisboks != ' ') {
+                BokstGis = false;
+            } else {
                 JOptionPane.showMessageDialog(null, "Du har skrivit antingen flera bokstäver eller en sifra! \n Försök igen...");
             }
+
         }
         System.out.println(gisboks);
     }
