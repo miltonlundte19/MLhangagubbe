@@ -15,24 +15,50 @@ public class hangagubbe {
         String gisboks = " ";
         String bokstiSt;
         Boolean BokstGis = true;
-        while (BokstGis){
-            bokstiSt = JOptionPane.showInputDialog("Gisa på en bokstav (får inte vara en sifra)");
-            gisboks = bokstkonverter(bokstiSt);
-            if (!gisboks.equals(" ")) {
-                BokstGis = false;
-            } else {
-                JOptionPane.showMessageDialog(null, "Du har skrivit antingen flera bokstäver eller en sifra! \n Försök igen...");
+        while (true) {
+            while (BokstGis) {
+                bokstiSt = JOptionPane.showInputDialog("Gisa på en bokstav (får inte vara en sifra)");
+                gisboks = bokstkonverter(bokstiSt);
+                if (!gisboks.equals(" ")) {
+                    BokstGis = false;
+                } else {
+                    JOptionPane.showMessageDialog(null, "Du har skrivit antingen flera bokstäver eller en sifra! \n Försök igen...");
+                }
+
             }
-
-        }
 //        System.out.println(gisboks);
-        ArrayList<String> gisadebokstäver = new ArrayList<String>();
-        int g = gisadebokstäver.size();
-        if (g == 0){
-            gisadebokstäver.add(gisboks);
+            ArrayList<String> gisadebokstäver = new ArrayList<String>();
+            int g = gisadebokstäver.size();
+            if (g == 0) {
+                gisadebokstäver.add(gisboks);
+            } else {
+
+                if (bokskontstor(gisadebokstäver, gisboks) == 1) {
+                    JOptionPane.showInputDialog(null, "fungerar.");
+                }
+            }
         }
 
+    }
 
+    private static int bokskontstor(ArrayList<String> gisadebokstäver, String gisboks) {
+        int i = gisadebokstäver.size();
+        int n = 0;
+        int b = 0;
+        String s;
+        while (true) {
+            for (n = 0; n == i; n++) {
+                s = gisadebokstäver.get(n);
+                if (s.equalsIgnoreCase(gisboks)) {
+                    b = 1;
+                    break;
+                }
+            }
+            if (n == i){
+                break;
+            }
+        }
+        return b;
     }
 
     private static String bokstkonverter(String bokstiSt) {
