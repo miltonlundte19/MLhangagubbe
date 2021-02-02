@@ -38,7 +38,7 @@ public class hangagubbe {
                 int b = bokskontstor(gisadebokstäver, gisboks);
                 if (b == 1) {
                     System.out.println("3");
-                    JOptionPane.showInputDialog(null, "Du har redan gisat på det.");
+                    JOptionPane.showMessageDialog(null, "Du har redan gisat på det.");
                 }else if (b == 0){
                     System.out.println("4");
                     gisadebokstäver = addbokstav(gisadebokstäver,gisboks);
@@ -60,16 +60,14 @@ public class hangagubbe {
         int b = 0;
         String s;
         while (true) {
-            for (n = 0; n == i; n++) {
+            for (n = 0; n < i; n++) {
                 s = gisadebokstäver.get(n);
                 if (s.equalsIgnoreCase(gisboks)) {
                     b = 1;
                     break;
                 }
             }
-            if (n == i){
-                break;
-            }
+            break;
         }
         return b;
     }
