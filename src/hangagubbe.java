@@ -44,7 +44,8 @@ public class hangagubbe {
     }
 
     private static ArrayList<String> addbokstav(ArrayList<String> gisadebokstäver, String gisboks) {
-
+        gisadebokstäver.add(gisboks);
+        return gisadebokstäver;
     }
 
     private static int bokskontstor(ArrayList<String> gisadebokstäver, String gisboks) {
