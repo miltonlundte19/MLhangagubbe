@@ -18,4 +18,4 @@ har gjort om och färdigt logiken för att gisa på en bokstav. Har också börj
 
 
 - 2021-02-02:
-Jag har bestemt mej att byta ut alla char element till strings.
+Jag har bestemt mej att byta ut alla char element till strings. jag har gjort färdigt allt som har med att gisa på en bokstav och att lagra den nesta steg är att göra metoder för att tita om det är ret bokstav eller inte.
