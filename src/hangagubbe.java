@@ -32,12 +32,18 @@ public class hangagubbe {
             if (g == 0) {
                 gisadebokstäver.add(gisboks);
             } else {
-
-                if (bokskontstor(gisadebokstäver, gisboks) == 1) {
-                    JOptionPane.showInputDialog(null, "fungerar.");
+                int b = bokskontstor(gisadebokstäver, gisboks);
+                if (b == 1) {
+                    JOptionPane.showInputDialog(null, "Du har redan gisat på det.");
+                }else if (b == 0){
+                    gisadebokstäver = addbokstav(gisadebokstäver,gisboks);
                 }
             }
         }
+
+    }
+
+    private static ArrayList<String> addbokstav(ArrayList<String> gisadebokstäver, String gisboks) {
 
     }
 
