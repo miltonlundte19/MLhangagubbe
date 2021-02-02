@@ -15,7 +15,9 @@ public class hangagubbe {
         String gisboks = " ";
         String bokstiSt;
         Boolean BokstGis = true;
+        ArrayList<String> gisadebokstäver = new ArrayList<String>();
         while (true) {
+            BokstGis = true;
             while (BokstGis) {
                 bokstiSt = JOptionPane.showInputDialog("Gisa på en bokstav (får inte vara en sifra)");
                 gisboks = bokstkonverter(bokstiSt);
@@ -27,18 +29,22 @@ public class hangagubbe {
 
             }
 //        System.out.println(gisboks);
-            ArrayList<String> gisadebokstäver = new ArrayList<String>();
             int g = gisadebokstäver.size();
             if (g == 0) {
                 gisadebokstäver.add(gisboks);
+                System.out.println("1");
             } else {
+                System.out.println("2");
                 int b = bokskontstor(gisadebokstäver, gisboks);
                 if (b == 1) {
+                    System.out.println("3");
                     JOptionPane.showInputDialog(null, "Du har redan gisat på det.");
                 }else if (b == 0){
+                    System.out.println("4");
                     gisadebokstäver = addbokstav(gisadebokstäver,gisboks);
                 }
             }
+            System.out.println(gisadebokstäver);
         }
 
     }
@@ -50,7 +56,7 @@ public class hangagubbe {
 
     private static int bokskontstor(ArrayList<String> gisadebokstäver, String gisboks) {
         int i = gisadebokstäver.size();
-        int n = 0;
+        int n = 1;
         int b = 0;
         String s;
         while (true) {
