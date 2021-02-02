@@ -12,13 +12,13 @@ public class hangagubbe {
             blanord = blanord + " _";
         }
         //JOptionPane.showMessageDialog(null, ord + "\n" + blanord);
-        char gisboks = ' ';
+        String gisboks = " ";
         String bokstiSt;
         Boolean BokstGis = true;
         while (BokstGis){
             bokstiSt = JOptionPane.showInputDialog("Gisa på en bokstav (får inte vara en sifra)");
             gisboks = bokstkonverter(bokstiSt);
-            if (gisboks != ' ') {
+            if (!gisboks.equals(" ")) {
                 BokstGis = false;
             } else {
                 JOptionPane.showMessageDialog(null, "Du har skrivit antingen flera bokstäver eller en sifra! \n Försök igen...");
@@ -26,21 +26,20 @@ public class hangagubbe {
 
         }
 //        System.out.println(gisboks);
-        Character gisbokChar = gisboks;
-        ArrayList<Character> gisadebokstävar = new ArrayList<Character>();
-        int g = gisadebokstävar.size();
+        ArrayList<String> gisadebokstäver = new ArrayList<String>();
+        int g = gisadebokstäver.size();
         if (g == 0){
-            gisadebokstävar = gisadebokstävar.add((char)Character.(gisboks));
+            gisadebokstäver.add(gisboks);
         }
 
 
     }
 
-    private static char bokstkonverter(String bokstiSt) {
+    private static String bokstkonverter(String bokstiSt) {
         int i = bokstiSt.length();
         int n;
         int m = 1;
-        char b = bokstiSt.charAt(0);
+        String b = String.valueOf(bokstiSt.charAt(0));
         if (i == 1) {
             try {
                 n = Integer.parseInt(bokstiSt);
@@ -50,7 +49,7 @@ public class hangagubbe {
             }
         }
         if (m == 1){
-            b = ' ';
+            b = " ";
         }
         return b;
     }
