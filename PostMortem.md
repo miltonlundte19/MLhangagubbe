@@ -6,7 +6,7 @@ Milton Lund. 2021-02-05
 
 Här beskriver du kortfattat arbetets syfte/mål, arbetssätt, genomförande.
 
-.
+. deta arbete var att gjöra ett gjöra ett program så att man kan spelar henga gubbe från inget i java. 
 
 ## Bakgrund
 
