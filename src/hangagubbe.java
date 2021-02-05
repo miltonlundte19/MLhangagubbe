@@ -7,14 +7,15 @@ public class hangagubbe {
         int ordlän = ord.length();
         String blanord = "_";
         int k;
+        String gisboks = " ";
+        String bokstiSt;
+        Boolean BokstGis = true;
         //System.out.println(ordlän);
         for (k=1;k!=ordlän;k++){
             blanord = blanord + " _";
         }
         //JOptionPane.showMessageDialog(null, ord + "\n" + blanord);
-        String gisboks = " ";
-        String bokstiSt;
-        Boolean BokstGis = true;
+
         ArrayList<String> gisadebokstäver = new ArrayList<String>();
         while (true) {
             BokstGis = true;
@@ -26,21 +27,20 @@ public class hangagubbe {
                 } else {
                     JOptionPane.showMessageDialog(null, "Du har skrivit antingen flera bokstäver eller en sifra! \n Försök igen...");
                 }
-
             }
 //        System.out.println(gisboks);
             int g = gisadebokstäver.size();
             if (g == 0) {
                 gisadebokstäver.add(gisboks);
-                System.out.println("1");
+ //               System.out.println("1");
             } else {
-                System.out.println("2");
+//                System.out.println("2");
                 int b = bokskontstor(gisadebokstäver, gisboks);
                 if (b == 1) {
-                    System.out.println("3");
+ //                   System.out.println("3");
                     JOptionPane.showMessageDialog(null, "Du har redan gisat på det.");
                 }else if (b == 0){
-                    System.out.println("4");
+//                    System.out.println("4");
                     gisadebokstäver = addbokstav(gisadebokstäver,gisboks);
                 }
             }
